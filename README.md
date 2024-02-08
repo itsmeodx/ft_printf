@@ -15,7 +15,28 @@ Finished: 2024-02-04. Grade: 125/100.
 
 ## Usage
 
-``make`` to compile.
+``make`` to compile libftprintf.a, a library that contains ft_printf functions and it's dependencies (including Libft).
 
 ### Basic Usage
 For example, let's create a ``main.c`` file.
+
+```c
+// Include the header
+#include "ft_printf.h"
+
+int main(void)
+{
+      // Call the function
+      ft_printf("Testing ft_printf!");
+      return (0);
+}
+```
+
+Compile the ``main.c`` file with the ft_printf library and run the program:
+```bash
+gcc main.c libftprintf.a && ./a.out
+```
+Output should be:
+```
+Testing ft_printf!
+```
