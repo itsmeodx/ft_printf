@@ -4,18 +4,18 @@ You will mainly learn about using a variable number of arguments. How cool is th
 It is actually pretty cool :)
 
 ## Introduction
-For the ft_printf project of the 42 school cursus, we must recreate the famous C library printf function. This project teaches us about variadic arguments as well as structures if we plan to implement printf's extra flags.
+For this project of the 42 school cursus, we must recreate the famous C library printf function. This project teaches us about variadic arguments as well as structures if we plan to implement printf's extra flags.
 
 - Supported conversions: %, c, s, p, i, d, u, x, X
 - Supported flags: # + (space)
-- Supported options: - 0 . * width
+- Supported options: - 0 . width
 
 ## Status
-Finished: 2022-02-07. Grade: 125/100.
+Finished: 2024-02-04. Grade: 125/100.
 
 ## Usage
 
-``make`` or ``make bonus`` to compile.
+``make`` to compile.
 
 ### Basic Usage
 For example, let's create a ``main.c`` file.
