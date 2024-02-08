@@ -1,7 +1,7 @@
 # ft_printf
 
 <p align="center">
-  <img src="[https://github.com/mcombeau/mcombeau/blob/main/42_badges/ft_printfe.png" alt="ft_printf 42 project badge](https://github.com/vinicius-f-pereira/42-project-badges/raw/main/badges/libftm.png)"/>
+  <img src="https://raw.githubusercontent.com/vinicius-f-pereira/42-project-badges/main/badges/ft_printfm.png"/>
 </p>
 
 The goal of this project is pretty straightforward. You will recode printf().
