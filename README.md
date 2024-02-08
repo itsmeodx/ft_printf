@@ -7,8 +7,8 @@ It is actually pretty cool :)
 For this project of the 42 school cursus, we must recreate the famous C library printf function. This project teaches us about variadic arguments as well as structures if we plan to implement printf's extra flags.
 
 - Supported conversions: %, c, s, p, i, d, u, x, X
-- Supported flags: # + (space)
-- Supported options: - 0 . width
+- Supported flags: # + - (space) 0
+- Supported options: . width
 
 ## Status
 Finished: 2024-02-04. Grade: 125/100.
@@ -97,10 +97,6 @@ The table below lists supported format specifiers:
         <tr>
             <td align="center">(number)</td>
             <td>Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger.</td>
-        </tr>
-        <tr>
-            <td align="center">*</td>
-            <td>The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.</td>
         </tr>
     </tbody>
 	<thead>
