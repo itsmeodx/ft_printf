@@ -1,9 +1,8 @@
-# ft_printf
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/vinicius-f-pereira/42-project-badges/main/badges/ft_printfm.png"/>
 </p>
 
+# ft_printf
 The goal of this project is pretty straightforward. You will recode printf().
 You will mainly learn about using a variable number of arguments. How cool is that??
 It is actually pretty cool :)
