@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+obj/
 
 # Linker output
 *.ilk
@@ -63,6 +64,9 @@ build/
 includes/
 .cache/
 
+# Text files
+*.txt
+
 # .gitignore file
 #.gitignore
 
@@ -70,3 +74,6 @@ includes/
 .vscode
 .idea
 cmake-build-debug
+
+# README file
+#*.md
