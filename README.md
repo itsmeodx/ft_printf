@@ -156,3 +156,20 @@ The table below lists supported format specifiers:
         </tr>
     </tbody>
 </table>
+
+For example, let's ask to print the integer 42 with a width of 20, and then to print it again but with a width of 8, the 0 flag and the + flag:
+```c
+#include "ft_printf"
+
+int main(void)
+{
+    ft_printf("Number [%20i]\n", 42);
+    ft_printf("Number [%+0*i]\n", 8, 42);
+    return (0);
+}
+```
+Outputs:
+```
+Number [                  42]
+Number [+0000042]
+```
