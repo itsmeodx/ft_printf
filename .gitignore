@@ -49,6 +49,7 @@ main
 *.idb
 *.pdb
 vgcore.*
+.gdb_history
 
 # Kernel Module Compile Results
 *.mod*
