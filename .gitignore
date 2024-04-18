@@ -69,7 +69,7 @@ includes/
 *.txt
 
 # .gitignore file
-#.gitignore
+.gitignore
 
 # Random folder
 .vscode
