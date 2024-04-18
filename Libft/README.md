@@ -1,6 +1,11 @@
-# Libft-42
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vinicius-f-pereira/42-project-badges/main/badges/libftm.png"/>
+</p>
+
+## Libft
 This project is about coding a C library.
 It will contain a lot of general purpose functions your programs will rely upon.
+
 # Resources
 Makefile <br/>
 https://makefiletutorial.com/<br/><br/>https://gl.developpez.com/tutoriel/outil/makefile/<br/><br/>http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html<br/><br/>Typecasting<br/>https://www.tutorialspoint.com/cprogramming/c_type_casting.htm<br/><br/>https://zhu45.org/posts/2017/Jan/19/typecasting-in-c/<br/><br/>https://developerinsider.co/type-casting-c-programming/<br/><br/>https://www.geeksforgeeks.org/typecasting-in-c/<br/><br/>Memory<br/>https://www.geeksforgeeks.org/memory-layout-of-c-program/<br/><br/>https://craftofcoding.wordpress.com/2015/12/07/memory-in-c-the-stack-the-heap-and-static/<br/><br/>https://www.gnu.org/software/libc/manual/html_node/Memory-Allocation-and-C.html<br/><br/>https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/16595-lallocation-dynamique<br/><br/>https://rperrot.developpez.com/articles/c/allocationC/<br/><br/>https://waytolearnx.com/2019/03/difference-entre-allocation-dynamique-et-allocation-statique.html<br/><br/>https://buzut.net/cours/computer-science/differents-types-de-memoires<br/><br/>https://www.it-swarm-fr.com/fr/c/difference-entre-lallocation-de-memoire-statique-et-lallocation-de-memoire-dynamique/940988866/<br/><br/>http://www.cs.ru.nl/~erikpoll/sws1/slides/hic4.pdf
