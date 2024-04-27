@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 14:45:52 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/01/28 10:23:49 by oouaadic         ###   ########.fr       */
+/*   Created: 2023/11/08 10:53:47 by oouaadic          #+#    #+#             */
+/*   Updated: 2024/04/27 15:21:23 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_base(long m, int base)
+void	ft_bzero(void *s, size_t n)
 {
-	int		count;
-	char	*key;
+	size_t	i;
 
-	key = "0123456789abcdef";
-	count = 0;
-	if (m < 0)
-	{
-		count += ft_putchar('-');
-		m = -m;
-	}
-	if (m >= base)
-		count += ft_putnbr_base(m / base, base);
-	count += ft_putchar(key[m % base]);
-	return (count);
+	i = -1;
+	while (++i < n)
+		*(unsigned char *)(s + i) = 0;
 }

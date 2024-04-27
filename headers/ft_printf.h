@@ -6,14 +6,14 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:38:56 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 21:45:01 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/04/27 21:13:55 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include "./Libft/libft.h"
+# include "libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 

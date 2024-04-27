@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: itsmeodx <itsmeodx@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:52:20 by oouaadic          #+#    #+#             */
-/*   Updated: 2023/12/02 15:04:37 by itsmeodx         ###   ########.fr       */
+/*   Updated: 2024/04/27 17:08:18 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
+	size_t	i;
 	size_t	lenstr;
 
 	if (!s)
 		return (NULL);
-	lenstr = ft_strlen(s);
+	lenstr = 0;
+	while (s[lenstr])
+		lenstr++;
 	if (start >= lenstr)
 		return (ft_strdup(""));
 	if (len > lenstr - start)
@@ -27,6 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
-	ft_strlcpy(sub, s + start, len + 1);
+	i = -1;
+	while (++i < len)
+		sub[i] = s[start + i];
 	return (sub);
 }
