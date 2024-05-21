@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:16:51 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 16:20:09 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:52:05 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_parse_nbr(long nbr, t_flags *flags, int base)
 		flags->precision = ft_nbrlen(nbr, base);
 	if ((flags->type != 'u') && (flags->space == 1) && (flags->sign == 0))
 	{
-		count += ft_putchar(' ');
+		count += ft_putchar_fd(' ', flags->fd);
 		flags->width--;
 	}
 	count += ft_print_nbr(nbr, flags, base);
@@ -57,7 +57,7 @@ int	ft_print_nbr(long nbr, t_flags *flags, int base)
 		count += ft_print_width(flags, flags->precision + sign,
 				flags->zero);
 	count += ft_print_precision(flags, ft_nbrlen(nbr, base));
-	count += ft_putnbr_base(nbr, base);
+	count += ft_putnbr_base_fd(nbr, base, flags->fd);
 	if (flags->minus == 1)
 		count += ft_print_width(flags, flags->precision + sign,
 				flags->zero);

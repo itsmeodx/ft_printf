@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:37:28 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 21:58:16 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 17:01:12 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_parse_type(va_list ap, char c, t_flags *flags)
 	else if (c == 'p')
 		count += ft_parse_pointer(va_arg(ap, unsigned long long), flags);
 	else if (c == '%')
-		count += ft_putchar('%');
+		count += ft_putchar_fd('%', flags->fd);
 	return (count);
 }
 
@@ -75,6 +75,7 @@ int	ft_printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
+	flags.fd = 1;
 	va_start(ap, format);
 	count = 0;
 	i = 0;
@@ -83,7 +84,34 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			count += ft_parse(ap, format, &i, &flags);
 		else
-			count += ft_putchar(format[i]);
+			count += ft_putchar_fd(format[i], 1);
+		i++;
+	}
+	if (format[0] && flags.type == 0 && flags.init == 1)
+		return (-1);
+	va_end(ap);
+	return (count);
+}
+
+int	ft_dprintf(int fd, const char *format, ...)
+{
+	t_flags	flags;
+	va_list	ap;
+	int		count;
+	int		i;
+
+	if (!format)
+		return (-1);
+	flags.fd = fd;
+	va_start(ap, format);
+	count = 0;
+	i = 0;
+	while (format[i])
+	{
+		if (format[i] == '%')
+			count += ft_parse(ap, format, &i, &flags);
+		else
+			count += ft_putchar_fd(format[i], fd);
 		i++;
 	}
 	if (format[0] && flags.type == 0 && flags.init == 1)

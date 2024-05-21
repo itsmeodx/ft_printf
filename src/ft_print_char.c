@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:13:21 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 15:55:23 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:25:34 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_parse_char(char c, t_flags *flags)
 	count = 0;
 	if (flags->minus == 0)
 		count += ft_print_width(flags, 1, 0);
-	count += ft_putchar(c);
+	count += ft_putchar_fd(c, flags->fd);
 	if (flags->minus == 1)
 		count += ft_print_width(flags, 1, 0);
 	return (count);

@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:38:56 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/04/27 21:13:55 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:56:40 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,11 @@ typedef struct s_flags
 	int		offset;
 	int		precision;
 	int		precision_exist;
+	int		fd;
 }				t_flags;
 
 int				ft_printf(const char *format, ...);
+int				ft_dprintf(int fd, const char *format, ...);
 int				ft_parse(va_list ap, const char *format, int *i,
 					t_flags *flags);
 int				ft_parse_type(va_list ap, char c, t_flags *flags);
@@ -55,7 +57,7 @@ void			ft_parse_precision(const char *format,
 int				ft_print_string(char *str, t_flags *flags);
 int				ft_print_str_precision(char *str, t_flags *flags);
 int				ft_print_nbr(long nbr, t_flags *flags, int base);
-int				ft_putnbr_base_key(unsigned long m, char *key, int base);
+int				ft_putnbr_base_key_fd(unsigned long m, char *key, int base, int fd);
 int				ft_print_hexa(unsigned long nbr, char *key, char *hash,
 					t_flags *flags);
 int				ft_print_pointer(unsigned long long adr, char *str,

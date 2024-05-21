@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:04:18 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/01/31 16:05:45 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:28:59 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_print_precision(t_flags *flags, int len)
 		count += ft_print_sign(flags);
 	while (precision - len > 0)
 	{
-		count += ft_putchar('0');
+		count += ft_putchar_fd('0', flags->fd);
 		precision--;
 	}
 	return (count);

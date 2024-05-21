@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 16:41:59 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/02 15:04:36 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:46:16 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_print_string(char *str, t_flags *flags)
 	count = 0;
 	if (flags->minus == 0)
 		count += ft_print_width(flags, ft_strlen(str), 0);
-	count += ft_putstr(str);
+	count += ft_putstr_fd(str, flags->fd);
 	if (flags->minus == 1)
 		count += ft_print_width(flags, ft_strlen(str), 0);
 	return (count);
@@ -60,7 +60,7 @@ int	ft_print_str_precision(char *str, t_flags *flags)
 		count += ft_print_width(flags, flags->precision, 0);
 	while (str[i] && i < flags->precision)
 	{
-		count += ft_putchar(str[i]);
+		count += ft_putchar_fd(str[i], flags->fd);
 		i++;
 	}
 	if (flags->minus == 1)

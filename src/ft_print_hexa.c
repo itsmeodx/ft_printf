@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:18:00 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 18:45:52 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:38:41 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,32 +41,32 @@ int	ft_print_hexa(unsigned long nbr, char *key, char *hash, t_flags *flags)
 	if (flags->precision < ft_nbrlen(nbr, 16))
 		flags->precision = ft_nbrlen(nbr, 16);
 	if (flags->hash == 2 && flags->zero == 1)
-		count += ft_putstr(hash);
+		count += ft_putstr_fd(hash, flags->fd);
 	if (flags->minus == 0)
 		count += ft_print_width(flags, flags->precision + flags->hash,
 				flags->zero);
 	if (flags->hash == 2 && flags->zero == 0)
-		count += ft_putstr(hash);
+		count += ft_putstr_fd(hash, flags->fd);
 	count += ft_print_precision(flags, ft_nbrlen(nbr, 16));
-	count += ft_putnbr_base_key(nbr, key, 16);
+	count += ft_putnbr_base_key_fd(nbr, key, 16, flags->fd);
 	if (flags->minus == 1)
 		count += ft_print_width(flags, flags->precision + flags->hash,
 				flags->zero);
 	return (count);
 }
 
-int	ft_putnbr_base_key(unsigned long m, char *key, int base)
+int	ft_putnbr_base_key_fd(unsigned long m, char *key, int base, int fd)
 {
 	int		count;
 
 	count = 0;
 	if (m < 0)
 	{
-		count += ft_putchar('-');
+		count += ft_putchar_fd('-', fd);
 		m = -m;
 	}
 	if (m >= (unsigned long)base)
-		count += ft_putnbr_base_key(m / base, key, base);
-	count += ft_putchar(key[m % base]);
+		count += ft_putnbr_base_key_fd(m / base, key, base, fd);
+	count += ft_putchar_fd(key[m % base], fd);
 	return (count);
 }

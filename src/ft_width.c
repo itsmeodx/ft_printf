@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:00:36 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 11:18:54 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:39:22 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	ft_print_width(t_flags *flags, int size, int zero)
 	while (width - size > 0)
 	{
 		if (zero == 1)
-			count += ft_putchar('0');
+			count += ft_putchar_fd('0', flags->fd);
 		else
-			count += ft_putchar(' ');
+			count += ft_putchar_fd(' ', flags->fd);
 		width--;
 	}
 	return (count);
