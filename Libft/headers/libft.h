@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:34:17 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/04/16 18:32:38 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:50:04 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int					ft_putendl(char *s);
 int					ft_putnbr_fd(int n, int fd);
 int					ft_putnbr(int n);
 int					ft_putnbr_base(long n, int base);
+int					ft_putnbr_base_fd(long n, int base, int fd);
 int					ft_putstr_fd(char *s, int fd);
 int					ft_putstr(char *s);
 

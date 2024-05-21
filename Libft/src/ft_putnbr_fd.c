@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:45:52 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/04/27 17:46:28 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:49:46 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,23 @@ int	ft_putnbr_base(long m, int base)
 	if (m >= base)
 		count += ft_putnbr_base(m / base, base);
 	count += write(1, &key[m % base], 1);
+	return (count);
+}
+
+int	ft_putnbr_base_fd(long m, int base, int fd)
+{
+	int		count;
+	char	*key;
+
+	key = "0123456789abcdef";
+	count = 0;
+	if (m < 0)
+	{
+		count += write(fd, "-", 1);
+		m = -m;
+	}
+	if (m >= base)
+		count += ft_putnbr_base_fd(m / base, base, fd);
+	count += write(fd, &key[m % base], 1);
 	return (count);
 }
