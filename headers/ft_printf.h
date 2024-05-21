@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:38:56 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/05/12 16:56:40 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/21 18:40:30 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ void			ft_parse_precision(const char *format,
 int				ft_print_string(char *str, t_flags *flags);
 int				ft_print_str_precision(char *str, t_flags *flags);
 int				ft_print_nbr(long nbr, t_flags *flags, int base);
-int				ft_putnbr_base_key_fd(unsigned long m, char *key, int base, int fd);
+int				ft_putnbr_base_key_fd(unsigned long m, char *key, int base,
+					int fd);
 int				ft_print_hexa(unsigned long nbr, char *key, char *hash,
 					t_flags *flags);
 int				ft_print_pointer(unsigned long long adr, char *str,
