@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:52:20 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/04/27 17:08:18 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/11 17:06:49 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = -1;
 	while (++i < len)
 		sub[i] = s[start + i];
+	sub[i] = '\0';
 	return (sub);
 }
