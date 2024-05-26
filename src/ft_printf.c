@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:37:28 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/05/12 17:01:12 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/05/26 18:13:26 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int	ft_printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
+	flags = (t_flags){0};
 	flags.fd = 1;
 	va_start(ap, format);
 	count = 0;
@@ -102,6 +103,7 @@ int	ft_dprintf(int fd, const char *format, ...)
 
 	if (!format)
 		return (-1);
+	flags = (t_flags){0};
 	flags.fd = fd;
 	va_start(ap, format);
 	count = 0;
