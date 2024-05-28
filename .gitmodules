@@ -1,3 +1,3 @@
 [submodule "Libft"]
 	path = Libft
-	url = https://github.com/itsmeodx/ft_printf.git
+	url = https://github.com/itsmeodx/libft.git
