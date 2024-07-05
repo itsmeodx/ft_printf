@@ -60,11 +60,6 @@ int	ft_putnbr_base_key_fd(unsigned long m, char *key, int base, int fd)
 	int		count;
 
 	count = 0;
-	if (m < 0)
-	{
-		count += ft_putchar_fd('-', fd);
-		m = -m;
-	}
 	if (m >= (unsigned long)base)
 		count += ft_putnbr_base_key_fd(m / base, key, base, fd);
 	count += ft_putchar_fd(key[m % base], fd);

@@ -39,11 +39,6 @@ int	ft_nbrlen_u(unsigned long long n, int base)
 	len = 0;
 	if (n == 0)
 		return (1);
-	if (n < 0)
-	{
-		len++;
-		n = -n;
-	}
 	while (n)
 	{
 		n /= base;
