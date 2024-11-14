@@ -6,7 +6,7 @@
 /*   By: oouaadic <oouaadic@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:02:10 by oouaadic          #+#    #+#             */
-/*   Updated: 2024/02/03 21:51:36 by oouaadic         ###   ########.fr       */
+/*   Updated: 2024/11/14 18:18:09 by oouaadic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ void	ft_parse_flags(char c, t_flags *flags)
 		flags->hash = 2;
 	else if (c == '0')
 	{
-		flags->zero = 1;
+		if (flags->minus == 0)
+			flags->zero = 1;
 		flags->zero_exist = 1;
-		if (flags->minus == 1)
-			flags->zero = 0;
 	}
 	else if (c == '-')
 	{
