@@ -168,7 +168,7 @@ For example, let's ask to print the integer 42 with a width of 20, and then to p
 int main(void)
 {
     ft_printf("Number [%20i]\n", 42);
-    ft_printf("Number [%+0*i]\n", 8, 42);
+    ft_printf("Number [%+08i]\n", 42);
     return (0);
 }
 ```
